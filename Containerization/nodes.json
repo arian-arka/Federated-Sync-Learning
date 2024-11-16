@@ -1,0 +1,163 @@
+{
+  "rounds": 20,
+  "logs_path": "./logs.json",
+  "image_name": "image_node_0",
+  "container_name_prefix": "container_node_",
+  "network": {
+    "name": "network_node_0",
+    "subnet": "188.18.0.0/16",
+    "https": false
+  },
+  "topology": [
+    [
+      0, 1, 1, 1
+    ],
+    [
+      1, 0, 0, 1
+    ],
+    [
+      1, 0, 0, 0
+    ],
+    [
+      1, 1, 0, 0
+    ]
+  ],
+  "containers": {
+    "0": {
+      "container": {
+        "cpu": 1,
+        "memory": "1200mb",
+        "port": 50000,
+        "ip": "188.18.0.2"
+      },
+      "env": {
+        "host": "0.0.0.0",
+        "debug": false,
+        "mongodb_uri": "mongodb://172.17.0.1:27018",
+        "epochs": 3,
+        "port": 50000,
+        "break_on_first_communication": false,
+        "communication_retries": 2,
+        "allowed_aggregation_seconds": 3,
+        "allowed_communication_seconds": 5,
+        "allowed_calculation_seconds": 12,
+        "allowed_test_of_train_seconds": 4,
+        "allowed_test_of_aggregation_seconds": 4
+      },
+      "args": {
+      },
+      "initialization": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "1": {
+      "container": {
+        "cpu": 1,
+        "memory": "1200mb",
+        "port": 50001,
+        "ip": "188.18.0.3"
+      },
+      "env": {
+        "host": "0.0.0.0",
+        "debug": false,
+        "mongodb_uri": "mongodb://172.17.0.1:27018",
+        "epochs": 3,
+        "port": 50001,
+        "break_on_first_communication": false,
+        "communication_retries": 2,
+        "allowed_aggregation_seconds": 3,
+        "allowed_communication_seconds": 5,
+        "allowed_calculation_seconds": 12,
+        "allowed_test_of_train_seconds": 4,
+        "allowed_test_of_aggregation_seconds": 4
+      },
+      "args": {
+      },
+      "initialization": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "2": {
+      "container": {
+        "cpu": 1,
+        "memory": "1200mb",
+        "port": 50002,
+        "ip": "188.18.0.4"
+      },
+      "env": {
+        "host": "0.0.0.0",
+        "debug": false,
+        "mongodb_uri": "mongodb://172.17.0.1:27018",
+        "epochs": 3,
+        "port": 50002,
+        "break_on_first_communication": false,
+        "communication_retries": 2,
+        "allowed_aggregation_seconds": 3,
+        "allowed_communication_seconds": 5,
+        "allowed_calculation_seconds": 12,
+        "allowed_test_of_train_seconds": 4,
+        "allowed_test_of_aggregation_seconds": 4
+      },
+      "args": {
+      },
+      "initialization": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "3": {
+      "container": {
+        "cpu": 1,
+        "memory": "1200mb",
+        "port": 50003,
+        "ip": "188.18.0.5"
+      },
+      "env": {
+        "host": "0.0.0.0",
+        "debug": false,
+        "mongodb_uri": "mongodb://172.17.0.1:27018",
+        "epochs": 3,
+        "port": 50003,
+        "break_on_first_communication": false,
+        "communication_retries": 2,
+        "allowed_aggregation_seconds": 3,
+        "allowed_communication_seconds": 5,
+        "allowed_calculation_seconds": 12,
+        "allowed_test_of_train_seconds": 4,
+        "allowed_test_of_aggregation_seconds": 4
+      },
+      "args": {
+      },
+      "initialization": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  }
+}

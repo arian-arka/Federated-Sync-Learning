@@ -1,0 +1,87 @@
+{
+  "rounds": 2,
+  "logs_path": "./logs.json",
+  "image_name": "image_node_0",
+  "container_name_prefix": "container_node_",
+  "network": {
+    "name": "network_node_0",
+    "subnet": "188.18.0.0/16",
+    "https": false
+  },
+  "topology": [
+    [
+      0, 1
+    ],
+    [
+      1, 0
+    ]
+  ],
+  "containers": {
+    "0": {
+      "container": {
+        "cpu": 1,
+        "memory": "1500mb",
+        "port": 50000,
+        "ip": "188.18.0.2"
+      },
+      "env": {
+        "host": "0.0.0.0",
+        "debug": false,
+        "mongodb_uri": "mongodb://172.17.0.1:27018",
+        "epochs": 1,
+        "port": 50000,
+        "break_on_first_communication": false,
+        "communication_retries": 2,
+        "allowed_aggregation_seconds": 5,
+        "allowed_communication_seconds": 5,
+        "allowed_calculation_seconds": 10,
+        "allowed_test_seconds": 5
+      },
+      "args": {
+      },
+      "initialization": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "1": {
+      "container": {
+        "cpu": 1,
+        "memory": "1500mb",
+        "port": 50001,
+        "ip": "188.18.0.3"
+      },
+      "env": {
+        "host": "0.0.0.0",
+        "debug": false,
+        "mongodb_uri": "mongodb://172.17.0.1:27018",
+        "epochs": 1,
+        "port": 50001,
+        "break_on_first_communication": false,
+        "communication_retries": 2,
+        "allowed_aggregation_seconds": 5,
+        "allowed_communication_seconds": 5,
+        "allowed_calculation_seconds": 10,
+        "allowed_test_seconds": 5
+      },
+      "args": {
+      },
+      "initialization": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+  }
+}
